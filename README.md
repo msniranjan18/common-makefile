@@ -1,19 +1,33 @@
 # common-makefile
+
 common.mk is a common-makefile to reuse the common tagets.
 
+
 ### Usage of common.mk
+
 ##### In your Project Repo
+
+```
 git submodule add https://github.com/msniranjan18/common-makefile.git build/common
+```
+
 
 ###### In your Project Makefile
+
 Use the include directive to import the common targets.
+
 ```
 -include build/common/common.mk
 ```
 
 
+
+
+
 #### The "Self-Updating" Logic for your Project Makefile
+
 Add this to the top of your Project-specific Makefile (the one that lives in your main repo). This logic ensures that before any common target (like lint or swagger) runs, the submodule is present.
+
 
 ```
 # --- Submodule Management ---
